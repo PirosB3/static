@@ -435,49 +435,45 @@
     padding: 0.75em 0;
   }
 
-  nav {
+  ol {
     max-width: 960px;
     margin: 0 auto;
+    padding: 0;
 
     @include ie-lte(7) {
       padding: 0 32px;
       width: 896px;
     }
 
-    ol {
-      margin: 0;
-      padding: 0;
+    li {
+      @include core-16;
+      background-image: image-url("separator.png");
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+      float: left;
+      list-style: none;
+      margin-left: 0;
+      margin-right: 0.5em;
+      padding-right: 1em;
 
-      li {
-        @include core-16;
-        background-image: image-url("separator.png");
-        background-position: 100% 50%;
-        background-repeat: no-repeat;
-        float: left;
-        list-style: none;
-        margin-left: 0;
-        margin-right: 0.5em;
-        padding-right: 1em;
-
-        @include device-pixel-ratio() {
-          background-image: image-url("separator-2x.png");
-          background-size: 6px 11px;
-        }
-
-        a {
-          color: $text-colour;
-        }
-
-        strong {
-          font-weight: normal;
-        }
-
-        &:last-child {
-          background-image: none;
-          margin-right: 0
-        }
-
+      @include device-pixel-ratio() {
+        background-image: image-url("separator-2x.png");
+        background-size: 6px 11px;
       }
+
+      a {
+        color: $text-colour;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+
+      &:last-child {
+        background-image: none;
+        margin-right: 0
+      }
+
     }
   }
 }
