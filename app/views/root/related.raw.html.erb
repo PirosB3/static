@@ -7,8 +7,8 @@
 
     <div class="related" id="related">
       <div class="inner group">
-        <h2>Other relevant links</h2>
-        <nav role="navigation">
+        <h2 id="relevant-links">Other relevant links</h2>
+        <nav role="navigation" aria-labelledby="relevant-links">
           <ul>
             <% artefact.related_artefacts.each do |item| %>
               <li>
@@ -21,9 +21,7 @@
             <% end %>
           </ul>
         </nav>
-        <nav role="navigation" class="return-to-top">
-          <a href="#content">Return to top &uarr;</a>
-        </nav>
+        <a class="return-to-top" href="#content">Return to top &uarr;</a>
      </div>
      <div id="legacy-sources">
        <p>This replaces</p>
